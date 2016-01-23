@@ -40,4 +40,4 @@ Next, execute the following scripts:
 
 1) buildConformingFunnel: given a transition atomic controller, a trajectory starting from within the funnel for that controller, a region object, and a finite-state machine, compute a feedback controller and verify invariance using a quadratically-parameterized funnel with respect to the given trajectory.  If this fails, then compute a conforming funnel to guarantee the system remains within the desired region using the barrier function technique of [1].
 
-2) simulateConformingFunnel: given a barrier function-based atomic controller, 
+2) simulateConformingFunnel: given a barrier function-based atomic controller, simulate the system over a finite time interval from an initial condition of the user's choosing. 

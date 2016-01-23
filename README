@@ -9,6 +9,8 @@ The example encapsulates the main contribution of the paper: computation of conf
 Installation
 ============
 
+First, clone the repo: 
+
 This package requires MATLAB 2012b or later.  In addition, it requires installation of the following dependencies.  It may be convenient to install these within the 'lib' folder in the project directory, to make the path set-up easier.
 
 1) Either of the following:
@@ -34,10 +36,12 @@ Running the Example
 
 To run the example, first set up the path using the script "setupPath.m".  The paths assume that the dependencies reside in the 'lib' folder, but can be adjusted as needed.
 
-load the data contained in "box_pushing_example.mat".  This populates the workspace with pre-computed controllers that execute several of the transitions of the finite-state machine described in Sec. 7.1 of [1] for a unicycle-type robot, as well as a trajectory that drives the system from an initial condition within the controller to a final condition within the same region.  Several parameters are also given in the "options" structure.  
+Next, load the data contained in "box_pushing_example.mat".  This populates the workspace with pre-computed controllers that execute several of the transitions of the finite-state machine described in Sec. 7.1 of [1] for a unicycle-type robot, as well as a trajectory that drives the system from an initial condition within the controller to a final condition within the same region.  Several parameters are also given in the "options" structure.  
 
-Next, execute the following scripts:
+With the workspace variables loaded, execute the following scripts:
 
 1) buildConformingFunnel: given a transition atomic controller, a trajectory starting from within the funnel for that controller, a region object, and a finite-state machine, compute a feedback controller and verify invariance using a quadratically-parameterized funnel with respect to the given trajectory.  If this fails, then compute a conforming funnel to guarantee the system remains within the desired region using the barrier function technique of [1].
 
 2) simulateConformingFunnel: given a barrier function-based atomic controller, simulate the system over a finite time interval from an initial condition of the user's choosing. 
+
+Questions or comments can be addressed to Jon: jad455@cornell.edu
