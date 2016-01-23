@@ -1,4 +1,6 @@
 function [ac,c] = computeAtomicController(u0,x0,sys,regMode,ellToCompose,options,varargin)
+% 
+% 
 
 c = [];
     

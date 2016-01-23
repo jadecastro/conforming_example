@@ -177,7 +177,6 @@ classdef BarrierFunctionAC < PolynomialAC
                 u_cbf = -1/(b'*b)*(a + sqrt(a^2 + gamma^2*b'*b))*b;
             end
             
-            u_cbf
             u = u_pre + u_cbf;
             
         end
