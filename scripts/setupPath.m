@@ -1,14 +1,18 @@
 %
-% Set up the path for the HSCC 2016 Repeatability Package.
+% Set up the path for using the "Conforming Funnels" HSCC 2016 Repeatability Package.
 % 
 
-addpath(genpath([pwd,'/../../HSCC2016']));
-addpath(genpath([pwd,'/../../HSCC2016/lib/drake-distro/spotless']));
-addpath([pwd,'/../../HSCC2016/lib/drake-distro/drake']);
+% Modify the following to reflect the installation paths for Drake and Mosek.  
+% The following assumes all dependencies have been installed in the 'lib' folder of the current project.
+addpath(genpath([pwd,'/..']));
+addpath(genpath([pwd,'/../lib/drake-distro/spotless']));
+addpath([pwd,'/../lib/drake-distro/drake']);
 
-addpath(genpath('/home/jon/Software/mosek'));
+addpath(genpath([pwd,'/../lib/mosek']));
 
-run('/home/jon/Software/drake-distro/drake/addpath_drake');
+run([pwd,'/../lib/drake-distro/drake/addpath_drake']);
 
-
-
+% If installing ellipsoids version 1.1.3 and MPT version 2.6.3, these packages come bundled with SeDuMi, 
+% which may cause errors (e.g. invalid MEX file errors). To remedy this, remove them from the path:
+rmpath([pwd,'/../lib/ellipsoids/solvers/SeDuMi_1_1']);
+rmpath([pwd,'/../lib/mpt/solvers/SeDuMi_1_3']);
