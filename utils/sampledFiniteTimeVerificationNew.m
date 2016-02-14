@@ -1,4 +1,4 @@
-function V = sampledFiniteTimeVerification(sys,ts,G,rho_if,varargin) 
+function V = sampledFiniteTimeVerificationNew(sys,ts,G,rho_if,varargin) 
 % Attempts to find the largest funnel, defined by the time-varying
 % one-level set of V, which verifies (using SOS over state at finite 
 % sample points in time) initial conditions to end inside the one-level set

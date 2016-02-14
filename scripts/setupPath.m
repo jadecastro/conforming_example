@@ -17,6 +17,7 @@ rmpath(genpath([pwd,'/../lib/drake-distro/drake/examples']));
 %rmpath(genpath(GetFullPath([pwd,'/../lib/drake-distro/drake/examples'])));
 
 addpath([pwd,'/../lib/drake-distro/drake/examples/DubinsCar']);
+rmpath(genpath([pwd,'/../lib/drake-distro/drake/systems/@PolynomialSystem']));
 
 % If installing ellipsoids version 1.1.3 and MPT version 2.6.3, these packages come bundled with SeDuMi, 
 % which may cause errors (e.g. invalid MEX file errors). To remedy this, remove them from the path:
